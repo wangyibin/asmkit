@@ -111,4 +111,5 @@ func (r *Bam2linker) Run() error {
 	if err != nil {
 		return err
 	}
+	return nil
 }

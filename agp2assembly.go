@@ -6,10 +6,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
-
-	"github.com/op/go-logging"
 )
-
 
 // Agp2assembler
 type Agp2assembler struct {
@@ -150,4 +147,5 @@ func (r *Agp2assembler) Run() error {
 	if err != nil {
 		return err
 	}
+	return nil
 }
