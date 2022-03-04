@@ -7,10 +7,10 @@ import (
 var rootCmd = &cobra.Command {
 	Use: "asmkit",
 	Short: "Toolkit for genome assembly",
-	Version: Version
+	Version: Version,
 }
 
-func Execute() err {
+func Execute() error {
 	return rootCmd.Execute()
 }
 
@@ -27,7 +27,7 @@ func init() {
 				log.Fatal(err)
 			}
 		},
-	},
+	}
 
 	agp2assembly := &cobra.Command {
 		Use: "agp2assembly",
@@ -41,5 +41,5 @@ func init() {
 				log.Fatal(err)
 			}
 		},
-	},
+	}
 }

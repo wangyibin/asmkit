@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"asmkit"
+	"github.com/wangyibin/asmkit"
 )
 
 func main() {
