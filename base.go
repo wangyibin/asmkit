@@ -6,6 +6,8 @@ import (
 
 const (
 	Version = "0.0.1"
+	Author  = "Yibin Wang"
+	License = "BSD 3-Clause"
 )
 
 var log = logging.MustGetLogger("asmkit")
