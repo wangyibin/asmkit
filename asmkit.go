@@ -62,5 +62,27 @@ Convert agp file into 3d-dna assembly for juicebox assembly tool.
 		},
 	}
 
-	rootCmd.AddCommand(agp2assemblyCmd, bam2linkCmd)
+	var mapq int
+	bamStatCmd := &cobra.Command{
+		Use:   "bamStat <input.bam>",
+		Short: "Stat the number of different types of alignments.",
+		Long: `
+bamStat function:
+Stat the number of different types of alignments, including unique || 
+multiple || low quality alignments.
+`,
+		Args: cobra.ExactArgs(1),
+		Run: func(cmd *cobra.Command, args []string) {
+			bamfile := args[0]
+			p := BamStater{Bamfile: bamfile, MapQ: mapq}
+			err := p.Run()
+			if err != nil {
+				log.Fatal(err)
+			}
+
+		},
+	}
+	bamStatCmd.Flags().IntVarP(&mapq, "mapq", "", 10, "Minimum map quality")
+
+	rootCmd.AddCommand(agp2assemblyCmd, bam2linkCmd, bamStatCmd)
 }
