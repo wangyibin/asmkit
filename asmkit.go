@@ -5,8 +5,17 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:     "asmkit",
-	Short:   "Toolkit for genome assembly",
+	Use:   "asmkit",
+	Short: "Toolkit for genome assembly",
+	Long: `
+                               __   .__  __   
+	_____    ______ _____ |  | _|__|/  |_ 
+	\__  \  /  ___//     \|  |/ /  \   __\
+	 / __ \_\___ \|  Y Y  \    <|  ||  |  
+	(____  /____  >__|_|  /__|_ \__||__|  
+		 \/     \/      \/     \/       
+
+ `,
 	Version: Version,
 }
 
