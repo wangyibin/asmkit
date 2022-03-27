@@ -3,7 +3,7 @@ Toolkit for genome assembly
 
 ## Introduction  
 
-`asmkit` provide some useful tools for genome scaffold, especially design for [ALLHiC](https://github.com/tangerzhang/ALLHiC).
+`asmkit` provide some useful tools for genome scaffolding, especially design for [ALLHiC](https://github.com/tangerzhang/ALLHiC).
 
 ## Installation
 The easiest way to install `asmkit` is to download the latest binary from the [releases](https://github.com/wangyibin/asmkit/releases/latest)  
