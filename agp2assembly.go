@@ -78,6 +78,9 @@ func (r *Agp2assembler) AGP2Assembly() error {
 	}
 	scanner := bufio.NewScanner(fh)
 	for scanner.Scan() {
+		if strings.HasPrefix(scanner.Text(), "#") {
+			continue
+		}
 		agp.Add(scanner.Text())
 	}
 	// output file
